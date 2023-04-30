@@ -1,6 +1,6 @@
 // create Vpc module
 module "elearning-vpc" {
-  source                  = "../Modules/vpc"
+  source                  = "../vpc modules/vpc/main.tf"
   region                  = local.region
   project_name            = local.project_name
   environment             = local.environment

@@ -1,3 +1,25 @@
+provider "aws" {
+  region = var.region
+
+  default_tags {
+    tags = {
+      "Automation"  = "terraform"
+      "project"     = var.project_name
+      "environment" = var.environment
+    }
+  }
+}
+# terraform provider
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+  required_version = ">= 1.1.5"
+}
+
 // environment 
 locals {
   region       = "var.region"
