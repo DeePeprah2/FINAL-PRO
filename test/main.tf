@@ -1,5 +1,5 @@
 // create Vpc module
-module "elearning-Vpc" {
+module "elearning-vpc" {
   source                  = "../Modules/vpc"
   region                  = local.region
   project_name            = local.project_name
